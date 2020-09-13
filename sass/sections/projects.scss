@@ -1,0 +1,105 @@
+section.projects {
+	text-align: center;
+	color: $cyan;
+	background: #fff url(../img/body_sky.png) bottom left no-repeat;
+	background-size: contain;
+	padding-top: 80px;
+	min-height: 590px;
+	position: relative;
+
+	@media (max-width: 500px) {
+		padding-top: 0;
+		padding-bottom: 120px;
+	}
+
+	h2 {
+		color: #9bee31;
+		font-size: 58pt;
+		margin-bottom: 50px;
+		font-family: $f_bpreplay;
+		position: relative;
+    	z-index: 2;
+    	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.32);
+    	text-transform: uppercase;
+
+		@media (max-width: 500px) {
+			font-size: 34pt;
+		}
+
+		strong {
+			font-size: 22pt;
+			display: block;
+			color: #012a56;
+			letter-spacing: 4pt;
+
+			&:before, &:after {
+			    content: "";
+			    display: inline-block;
+			    background-color: #012a56;
+			    width: 38px;
+			    height: 9px;
+			    margin: 0 10px 8px;
+
+				@media (max-width: 500px) {
+				    width: 18px;
+				    height: 5px;
+				    margin: 0 7px 6px;
+				}
+
+			}
+
+			@media (max-width: 500px) {
+				font-size: 15pt;
+			}
+		}
+	}
+
+	button {
+		text-align: left;
+		vertical-align: top;
+		display: inline-block;
+		border: none;
+		background-color: transparent;
+		width: 200px;
+		box-sizing: border-box;
+		padding: 0;
+		transform: rotateZ(0deg);
+		transition: all $transition ease;
+		margin: 10px 20px 30px;
+		cursor: pointer;
+		position: relative;
+		z-index: 2;
+
+		@media (max-width: 500px) {
+			margin: 10px 10px 30px;
+		}
+
+		&:hover {
+			transform: rotateZ(5deg);
+		}
+
+		&:focus, &:active {
+			outline: none;
+		}
+
+		img {
+			width: 100%;
+			box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.31);
+		}
+	}
+}
+
+.city {
+	width: 120%;
+	position: absolute;
+	bottom: -230px;
+	left: -10%;
+	z-index: 1;
+	height: 890px;
+	background: url(../img/city.png) no-repeat bottom center;
+	background-size: contain;
+
+	@media (max-width: 500px) {
+		bottom: -100px;
+	}
+}

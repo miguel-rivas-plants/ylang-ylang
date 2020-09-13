@@ -1,0 +1,23 @@
+doctype html
+html
+	head
+		meta(name="robots", content="noindex, nofollow")
+		include jade/vars
+		include jade/functions
+		include jade/metatags
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:400", rel="stylesheet", type="text/css")
+		link(href="css/application.css", rel="stylesheet")
+		include jade/analytics
+
+	body
+		aside.texture
+		aside.loading
+
+		main
+			include jade/sections/header
+			include jade/sections/letter
+			include jade/sections/projects
+			include jade/sections/modal
+			include jade/sections/footer
+
+		script(src="js/application.js", type="text/javascript")

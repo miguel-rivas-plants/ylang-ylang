@@ -1,0 +1,126 @@
+aside#modal {
+	article {
+		min-height: 100vh;
+		transform-origin: 0 0;
+		text-align: left;
+		display: none;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 9;
+		padding: 14px 18px;
+		color: #000;
+		background: rgba(255, 255, 255, 1);
+
+		button.close {
+		    position: absolute;
+		    top: 2px;
+		    right: 6px;
+		    background: transparent;
+		    border: none;
+		    color: #000;
+		    opacity: .8;
+		    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+		    font-size: 23pt;
+		    cursor: pointer;
+		    transition: all 200ms ease;
+
+		    &:hover {
+		    	opacity: .5;
+		    	transform: rotateZ(90deg);
+		    }
+
+			&:before {
+				content: "×";
+			}
+
+			&:active, &:focus {
+				outline: none;
+			}
+		}
+
+		section.links { text-align: center; }
+
+		.preview {
+			text-align: center;
+			background-color: rgba(0, 0, 0, 0.39);
+			padding: 18px 0;
+			img {
+				display: inline-block;
+				width: 170px;
+				margin: 10px;
+			}
+		}
+
+		.infoBox {
+			max-width: 300px;
+			display: inline-block;
+			padding: 15px;
+			box-sizing: border-box;
+			text-decoration: none;
+
+			&:hover > .btn {
+				background-color: #d6de23;
+				color: #000;
+			}
+
+			&:hover > img {
+				transform: rotateZ(2deg);
+			}
+
+		}
+
+		.btn {
+			display: block;
+		}
+
+		img {
+			width: 100%;
+			display: block;
+			margin: 12px auto;
+			transition: transform $transition ease;
+			box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.52);
+		}
+
+		.container {
+		    max-width: 740px;
+		    margin: auto;
+		    padding: 30px;
+		    font-size: 10pt;
+		    position: relative;
+		    overflow: auto;
+
+		    .scrollContent {
+				overflow-y: auto;
+				height: 72vh;
+
+				@media (max-height: 500px) {
+					height: 65vh;
+				}
+
+		    }
+		}
+
+		em {
+			color: #448400;
+			font-style: normal;
+		}
+
+		h3 {
+			color: #f3cf0d;
+			font-size: 20pt;
+			margin: 0 0 18px;
+			border-bottom: 2px solid $green;
+			padding-bottom: 14px;
+			letter-spacing: 1pt;
+		}
+
+		ul {
+			color: #448400;
+			padding-left: 17px;
+			font-size: 10pt;
+		}
+	}
+}
